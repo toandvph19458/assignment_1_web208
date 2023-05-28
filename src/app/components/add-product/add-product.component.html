@@ -1,0 +1,23 @@
+<div>
+        <h2>Thêm mới sản phẩm</h2>
+        <form (ngSubmit)="onhandleSubmit()">
+            <div class="">
+                <label for="">tên sản phẩm</label>
+            <input
+                type="text"
+                [(ngModel)]="product.name"
+                name="name"
+            />
+            </div>
+            <div class="">
+                <label for="">giá</label>
+            <input
+                type="number"
+                [(ngModel)]="product.price"
+                name="price"
+            />
+            </div>
+            <button type="submit">xác nhận</button>
+        </form>
+
+</div>

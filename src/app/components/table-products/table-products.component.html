@@ -1,0 +1,22 @@
+<div>
+    <h2>Quản lí sản phẩm</h2>
+    <table border="1px">
+        <tr>
+          <th>id</th>
+          <th>tên</th>
+          <th>giá</th>
+          <th>hành động</th>
+        </tr>
+        <tr *ngFor="let product of products">
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            <a routerLink="{{product.id}}">Sửa</a>
+            <button (click)="removeProduct(product.id)">Xóa</button>
+          </td>
+        </tr>
+      </table>
+    
+    
+</div>
