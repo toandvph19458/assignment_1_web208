@@ -4,17 +4,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { TableProductsComponent } from './components/table-products/table-products.component';
-import { AddProductComponent } from './components/add-product/add-product.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { TableProductComponent } from './components/table-product/table-product.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
-import { LayoutAdminComponent } from './layout/layout-admin/layout-admin.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    TableProductsComponent,
-    AddProductComponent,
+    AdminLayoutComponent,
+    TableProductComponent,
+    FormProductComponent,
     EditProductComponent,
-    LayoutAdminComponent
+
   ],
   imports: [
     BrowserModule,

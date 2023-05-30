@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutAdminComponent } from './layout/layout-admin/layout-admin.component';
-import { TableProductsComponent } from './components/table-products/table-products.component';
-import { AddProductComponent } from './components/add-product/add-product.component';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
+import { TableProductComponent } from './components/table-product/table-product.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 const routes: Routes = [
-  {path:"admin",component:LayoutAdminComponent,children:[
-    {path:"productManager" , component:TableProductsComponent},
-    {path:"add", component:AddProductComponent},
-    {path:"productManager/:id", component:EditProductComponent}
-  ]}
+{path:"admin",component:AdminLayoutComponent,children:[
+  {path:"productManager",component:TableProductComponent},
+  {path:"add",component:FormProductComponent},
+  {path:"productManager/:id",component:EditProductComponent}
+]}
 ];
 
 @NgModule({

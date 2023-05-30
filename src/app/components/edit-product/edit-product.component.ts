@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Iproduct } from 'src/app/interfaces/product';
-import { ServiceService } from 'src/app/services/service.service';
+import { Iproduct } from 'src/app/interface/product';
+import { ServiceService } from 'src/app/service/service.service';
 
 @Component({
   selector: 'app-edit-product',
@@ -14,7 +14,7 @@ export class EditProductComponent {
     name:"",
     price:0
   }
-  constructor(private productService:ServiceService,private router:Router,private params:ActivatedRoute){
+  constructor(private productService:ServiceService ,private router:Router,private params:ActivatedRoute){
     this.params.paramMap.subscribe((param)=>{
       const id = Number(param.get("id"))
       this.productService.getOne(id).subscribe((data)=>{
@@ -22,9 +22,9 @@ export class EditProductComponent {
       })
     })
   }
-  onhandleSubmit(){
-    this.productService.updateProduct(this.product).subscribe(()=>{
-      this.router.navigate(["admin/productManager"])
+  onHandleSubmit(){
+    this.productService.update(this.product).subscribe(()=>{
+      this.router.navigate(["/admin/productManager"])
     })
   }
 }
